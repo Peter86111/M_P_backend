@@ -1,0 +1,9 @@
+feladat 7:
+Scaffold-DbContext "server=localhost;database=********;user=root;password=;ssl mode=none;" mysql.entityframeworkcore -outputdir Models –f
+
+feladat8:
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+feladat14:
+a)	services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); });
+b)	app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
